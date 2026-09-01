@@ -7,7 +7,7 @@ const cors = require("cors");
 const todoRouter = require("./routers/todo");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URL || process.env.MONGO_URI || "mongodb://localhost:27017/todo";
 
 app.use(cors());
